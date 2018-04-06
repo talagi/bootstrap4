@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Szablon Bootstrapa</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Font Awesome, zob. How to Use: https://fontawesome.bootstrapcheatsheets.com -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- twoje style -->
+  <link rel="stylesheet" href="css/style.css">
+<style media="screen">
+  div{
+    margin-top:20px
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- brak java scriptu -->
+  <noscript>
+    Do pełnej funkcjonalności strony potrzebujesz włączonej obsługi skryptów.
+    Tu znajdziesz <a href="https://www.enable-javascript.com/pl/" target="_blank">
+    instrukcje, które pozwolą Ci włączyć skrypty w Twojej przeglądarce</a>.
+  </noscript>
+
+  <!-- nieaktualna przeglądarka, zob. dostosowanie: https://browser-update.org/customize.html -->
+  <script>
+    var $buoop = {notify:{e:-6,f:-4,o:-4,s:-2,c:-4},insecure:true,api:5};
+    function $buo_f(){
+      var e = document.createElement("script");
+      e.src = "//browser-update.org/update.min.js";
+      document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
+
+  <!-- Nagłówek strony: menu, logo, breadcrumbs itp. -->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+        <!-- toggle = przełącznik, collapse = rozłożyć, złożyć -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- ikona zwiniętego menu -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <!-- menu rozwijalne -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+
+  <!-- Treść główna -->
+  <div class="container">
+
+    <h1>Przykładowy formlularz do zakładania konta</h1>
+
+
+    <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail1" placeholder="Wprowadź email" required maxlength="20" minlenght="3">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword1">Hasło</label>
+      <input type="password" class="form-control" id="inputPassword1" placeholder="Hasło" required maxlength="30" minlenght="8">
+    </div>
+    <div class="form-group col-md-6">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword2">Powtórz hasło</label>
+      <input type="password" class="form-control" id="inputPassword2" placeholder="Powtórz hasło" required maxlength="30" minlenght="8">
+    </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="col-4">
+        <label for="inputStreet">Ulica</label>
+        <input type="text" class="form-control" placeholder="Ulica">
+      </div>
+      <div class="form-row col-4">
+        <label for="inputHome">Numer mieszkania</label>
+        <input type="number" class="form-control" placeholder="Mieszkanie" required min="1" max="500">
+      </div>
+
+      <div class="form-row col-4">
+        <label for="inputKode">Kod pocztowy</label>
+        <input type="text" class="form-control" placeholder="Kod pocztowy" required pattern="[0-9]{2}-[0-9]{3}">
+      </div>
+  </div>
+
+    <div class="returns e-mail form-row col-6">
+      <h4>Wyślij e-mail z potwierdzeniem:</h4>
+      <div class="form-check form-row col-6">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Tak
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Nie
+        </label>
+      </div>
+    </div>
+
+    <div class="form-check col-6">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Przeczytalem regulamin</label>
+    </div>
+
+<div class=" col-7">
+  <button type="submit" class="btn btn-primary">Sign in</button>
+
+</div>
+</form>
+</div>
+
+  <!-- Stopka strony: copyrights, dodatkowe linki itp. -->
+  <div class="container">
+
+  </div>
+
+  <!-- jQuery library -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap JavaScript and Popper JS (https://popper.js.org) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
