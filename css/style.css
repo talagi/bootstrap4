@@ -6,3 +6,7 @@ input:invalid {
 input:valid {
   border: 2px solid pink;
 }
+
+.canvas1 {
+  border: 1px solid gray;
+}
